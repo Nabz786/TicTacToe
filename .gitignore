@@ -1,0 +1,10 @@
+
+#Java class files
+*.class
+
+#Intellij IDEA 
+.idea/libraries
+.idea/tasks.xml
+.idea/vcs.xml
+.idea/workspace.xml
+out/
