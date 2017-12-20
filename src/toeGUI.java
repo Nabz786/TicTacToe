@@ -32,7 +32,6 @@ public class toeGUI extends Application {
         mainWindow = primaryStage;
         startButton = new Button("Start");
         quitButton = new Button("Quit");
-        iMadeIt = new Label("Proudly Coded by Nabeel V");
 
         startButton.setPrefSize(70, 50);
         quitButton.setPrefSize(70, 50);
@@ -43,7 +42,7 @@ public class toeGUI extends Application {
 
         VBox startMenuLayout = new VBox(20);
         startMenuLayout.setPadding(new Insets(100, 0, 0, 10));
-        startMenuLayout.getChildren().addAll(startButton, quitButton, iMadeIt);
+        startMenuLayout.getChildren().addAll(startButton, quitButton);
 
         mainMenu = new Scene(startMenuLayout, 500, 500);
 
