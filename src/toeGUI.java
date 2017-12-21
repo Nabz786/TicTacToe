@@ -10,9 +10,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 
-/**
- * Created by Nabeel Vali on 5/26/2017.
- */
+
 public class toeGUI extends Application {
 
 
@@ -20,8 +18,6 @@ public class toeGUI extends Application {
     private Scene mainMenu;
     private Button startButton;
     private Button quitButton;
-    private Label iMadeIt;
-
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -46,8 +42,6 @@ public class toeGUI extends Application {
 
         mainMenu = new Scene(startMenuLayout, 500, 500);
 
-        //mainMenu.getStylesheets().add("textStuff..css");
-
 
         mainWindow.setScene(mainMenu);
         mainWindow.setTitle("Tic Tac Toe");
@@ -56,6 +50,5 @@ public class toeGUI extends Application {
 
 
     }
-
     public static void main(String args[]) {launch(args);}
 }

@@ -32,6 +32,7 @@ public class Controller {
 
         game = new Game();
         initButtons();
+
         buttonGrid[0][0].setOnAction(event -> {
             game.playGame(1, 1);
 
