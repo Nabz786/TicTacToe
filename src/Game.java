@@ -1,8 +1,6 @@
 
 
-/**
- * Created by Nabz on 5/25/2017.
- */
+
 public class Game {
 
     /**Number of rows for board **/
