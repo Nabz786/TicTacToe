@@ -3,10 +3,8 @@
 
 public class Game {
 
-    /**Number of rows for board **/
     private int numRows = 3;
 
-    /**Number of columns for board **/
     private int numCols = 3;
 
     public boolean hasWon = false;
