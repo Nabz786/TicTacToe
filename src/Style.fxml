@@ -31,6 +31,8 @@
          </font>
       </Label>
       <Button fx:id="resetButton" layoutX="213.0" layoutY="470.0" mnemonicParsing="false" text="New Game" />
+      <Label fx:id="lblP1Score" layoutX="38.0" layoutY="32.0" text="P1 Score:" />
+      <Label fx:id="lblP2Score" layoutX="413.0" layoutY="32.0" text="P2 Score: " />
    </children>
    <opaqueInsets>
       <Insets />

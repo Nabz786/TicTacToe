@@ -16,9 +16,16 @@ public class Controller {
     private Button[][] buttonGrid;
 
     private Game game;
+    private int p1Score, p2Score;
 
     @FXML
     private Label titleLabel;
+
+    @FXML
+    private Label lblP1Score;
+
+    @FXML
+    private Label lblP2Score;
 
     @FXML
     private GridPane mainGrid;
@@ -28,10 +35,8 @@ public class Controller {
 
     @FXML
     private void initialize() {
+        initGame();
 
-
-        game = new Game();
-        initButtons();
 
         buttonGrid[0][0].setOnAction(event -> {
             game.playGame(1, 1);
@@ -105,6 +110,12 @@ public class Controller {
 
     }
 
+    private void initGame(){
+        p1Score = 0;
+        p2Score = 0;
+        game = new Game();
+        initButtons();
+    }
 
     private void initButtons() {
         buttonGrid = new Button[3][3];
@@ -113,17 +124,15 @@ public class Controller {
                 buttonGrid[r][c] = new Button();
                 buttonGrid[r][c].setMinSize(100, 100);
                 mainGrid.add(buttonGrid[r][c], r, c);
-
-
             }
         }
-
-
     }
+
 
 
     private void checkWin() {
         if (game.hasWon) {
+            updateScore();
             switch (game.getWinningLoc()) {
                 case co1One:
                     buttonGrid[0][0].getStyleClass().add("buttonStyles.css");
@@ -190,7 +199,19 @@ public class Controller {
                     buttonGrid[2][2].setStyle("-fx-background-color: slateblue; -fx-text-fill: white;");
                     break;
             }
-            titleLabel.setText("Congrats someone has won the game!");
+            titleLabel.setText("Winner!");
+        }
+    }
+
+    private void updateScore(){
+        if(game.hasWon){
+            if(game.p1Turn){
+                p2Score++;
+                lblP2Score.setText("P2 Score: " + Integer.toString(p2Score));
+            }
+            else
+                p1Score++;
+                lblP1Score.setText("P1 Score: "+ Integer.toString(p1Score));
         }
     }
 
