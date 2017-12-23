@@ -1,6 +1,3 @@
-
-
-
 public class Game {
 
     private int numRows = 3;
@@ -53,14 +50,11 @@ public class Game {
         if (checkWin()) {
             hasWon = true;
         }
-
     }
 
 
 
     private boolean checkWin() {
-
-
         if ((toeBoard[0][0] == toeBoard[1][0] && toeBoard[0][0] == toeBoard[2][0]) && toeBoard[0][0] != '\u0000') {
             setWinningLoc(winningLoc.rowOne);
             return true;
@@ -86,10 +80,7 @@ public class Game {
             setWinningLoc(winningLoc.diagRL);
             return true;
         }
-
         return false;
-
-
     }
 
 

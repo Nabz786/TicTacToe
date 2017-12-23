@@ -12,9 +12,7 @@ import javafx.scene.text.Font;
 
 public class Controller {
 
-
     private Button[][] buttonGrid;
-
     private Game game;
     private int p1Score, p2Score;
 
@@ -37,14 +35,12 @@ public class Controller {
     private void initialize() {
         initGame();
 
-
         buttonGrid[0][0].setOnAction(event -> {
             game.playGame(1, 1);
 
             checkWin();
             updateBoard();
         });
-
         buttonGrid[0][1].setOnAction(event -> {
             game.playGame(1, 2);
 
@@ -94,7 +90,6 @@ public class Controller {
             updateBoard();
         });
 
-
         resetButton.setOnAction(event -> {
             game.reset();
             titleLabel.setText("");
@@ -106,8 +101,6 @@ public class Controller {
             }
             updateBoard();
         });
-
-
     }
 
     private void initGame(){
@@ -127,8 +120,6 @@ public class Controller {
             }
         }
     }
-
-
 
     private void checkWin() {
         if (game.hasWon) {
@@ -215,9 +206,7 @@ public class Controller {
         }
     }
 
-
     private void updateBoard() {
-
         for (int r = 0; r < 3; r++) {
             for (int c = 0; c < 3; c++) {
                 char xAndO = game.toeBoard[r][c];
