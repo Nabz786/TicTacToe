@@ -46,13 +46,10 @@ public class Game {
                 p1Turn = true;
             }
         }
-
         if (checkWin()) {
             hasWon = true;
         }
     }
-
-
 
     private boolean checkWin() {
         if ((toeBoard[0][0] == toeBoard[1][0] && toeBoard[0][0] == toeBoard[2][0]) && toeBoard[0][0] != '\u0000') {
@@ -83,7 +80,6 @@ public class Game {
         return false;
     }
 
-
     public void reset(){
         toeBoard = new char[3][3];
         hasWon = false;
@@ -98,31 +94,4 @@ public class Game {
     public winningLoc getWinningLoc(){
         return loc;
     }
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-//    public static void main(String args[]){
-//
-//        Game game = new Game();
-//        game.drawBoard();
-//
-//        while(!game.hasWon){
-//            game.playGame();
-//
-//
-//        }
-//    }
-//}
