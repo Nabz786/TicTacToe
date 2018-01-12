@@ -1,7 +1,6 @@
 public class Game {
 
     private int numRows = 3;
-
     private int numCols = 3;
 
     public boolean hasWon = false;
@@ -9,13 +8,13 @@ public class Game {
 
     private winningLoc loc;
 
+    public char[][] toeBoard;
+
     public enum winningLoc{
         co1One, colTwo, colThree,
         rowOne, rowTwo, rowThree,
         diagLR, diagRL
     }
-
-    public char[][] toeBoard;
 
     public Game() {
         toeBoard = new char[3][3];
